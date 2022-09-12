@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mrhdfVN+QtJ8K4KwXd94uvEDxVCBwPJ9rEPfzF/bjoerMXsxnGIjlJ+jbCuW/2CNbkdD01wcUfC6YqCfjL3nag==",
+  "dgSpecHash": "5nq+pyj7J4frUQnsiGqw9n2YH/yAolwg6epBu9n4cboavXwBbyrQ2UHiLsEcPkS+7wQbRUTWPz1liYLueUgeDw==",
   "success": true,
   "projectFilePath": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\PizzeriaDominio\\PizzeriaDominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jfdua\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\jfdua\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\jfdua\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\jfdua\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

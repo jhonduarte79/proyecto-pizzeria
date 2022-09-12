@@ -2072,6 +2072,9 @@
       "PizzeriaDominio/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/PizzeriaDominio.dll": {}
         },
@@ -7268,11 +7271,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\pizzeriaPersistencia\\PizzeriaPersistencia.csproj",
+      "projectUniqueName": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\PizzeriaPersistencia\\PizzeriaPersistencia.csproj",
       "projectName": "PizzeriaPersistencia",
-      "projectPath": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\pizzeriaPersistencia\\PizzeriaPersistencia.csproj",
+      "projectPath": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\PizzeriaPersistencia\\PizzeriaPersistencia.csproj",
       "packagesPath": "C:\\Users\\jfdua\\.nuget\\packages\\",
-      "outputPath": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\pizzeriaPersistencia\\obj\\",
+      "outputPath": "C:\\PROYECTOPIZZATECH\\PizzeriaApp\\PizzeriaPersistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jfdua\\AppData\\Roaming\\NuGet\\NuGet.Config"

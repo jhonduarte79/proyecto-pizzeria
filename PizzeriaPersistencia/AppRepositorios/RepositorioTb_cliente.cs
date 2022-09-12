@@ -6,11 +6,8 @@ namespace PizzeriaPersistencia
 {
     public class RepositorioTb_cliente : IRepositorioTb_cliente
     {
-        private readonly AppContext _appContext;
-        public RepositorioTb_cliente(AppContext appContext)
-        {
-            _appContext = appContext;
-        }
+        private readonly AppContext _appContext = new AppContext();
+        
          public Cliente CrearCliente(Cliente cliente)
          {
             var clienteAdicionado = _appContext.Tb_cliente.Add(cliente);

@@ -4,48 +4,76 @@
     ViewData["Title"] = "Registro";
 }
 <div class="border">
-    <form>
+    <form method="post">
+      <div asp-validation-sumary="ModelOnly" class="text-danger"></div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <label asp-for="cliente.Email"></label>
+          <input asp-for="cliente.Email" class="form-control" id="inputEmail">
+          <span asp-validation-for="cliente.Email" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          <label asp-for="cliente.Password"></label>
+          <input asp-for="cliente.Password" class="form-control" id="inputPassword">
+          <span asp-validation-for="cliente.Password" class="text-danger"></span>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputNombre">Nombres</label>
-          <input type="text" class="form-control" id="inputNombres">
+          <label asp-for="cliente.Nombres"></label>
+          <input asp-for="cliente.Nombres" class="form-control" id="inputNombres">
+          <span asp-validation-for="cliente.Nombres" class="text-danger"></span>
         </div>
         <div class="form-group col-md-6">
-          <label for="inputApellido">Apellidos</label>
-          <input type="text" class="form-control" id="inputApellidos">
+          <label asp-for="cliente.Apellidos"></label>
+          <input asp-for="cliente.Apellidos" class="form-control" id="inputApellidos">
+          <span asp-validation-for="cliente.Apellidos" class="text-danger"></span>
         </div>
       </div>
 
-      <div class="form-group">
-        <label for="inputAddress">Direccion</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputCity">Ciudad</label>
-          <input type="text" class="form-control" id="inputCity">
+          <label asp-for="cliente.Telefono"></label>
+          <input asp-for="cliente.Telefono" class="form-control" id="inputTelefono">
+          <span asp-validation-for="cliente.Telefono" class="text-danger"></span>
         </div>
-        <div class="form-group col-md-3">
-          <label for="inputTelefono">Telefono</label>
-          <input type="text" class="form-control" id="inputTelefono">
-        </div>
-        <div class="form-group col-md-3">
-          <label for="inputUsuario">User name</label>
-          <input type="text" class="form-control" id="inputUsuario">
+        <div class="form-group col-md-6">
+          <label asp-for="cliente.Edad"></label>
+          <input asp-for="cliente.Edad" class="form-control" id="inputUsuario">
+          <span asp-validation-for="cliente.Edad" class="text-danger"></span>
         </div>
       </div>
       <div class="form-group">
+        <label asp-for="cliente.Direccion"></label>
+        <input asp-for="cliente.Direccion" class="form-control" id="inputAddress">
+        <span asp-validation-for="cliente.Direccion" class="text-danger"></span>
       </div>
-      <button type="submit" class="btn btn-primary">Registrarse</button>
+      <div class="form-group">
+      </div>
+      <button type="submit" class="btn btn-primary">Crear Cliente</button>
     </form>
 </div>
+
+<table class = "table">
+  <tr>
+    <td>Nombres</td>
+    <td>Apellidos</td>
+    <td>Email</td>
+    <td>Edad</td>
+    <td>Telefono</td>
+    <td>Direccion</td>
+  </tr>
+  
+    @foreach (var c in Model.listaCliente)
+    {
+      <tr>
+        <td>@c.Nombres</td>
+        <td>@c.Apellidos</td>
+        <td>@c.Email</td>
+        <td>@c.Edad</td>
+        <td>@c.Telefono</td>
+        <td>@c.Direccion</td>
+      </tr>
+    }
+  
+</table>
