@@ -14,9 +14,9 @@ namespace PizzeriaPersistencia
             _appContext.SaveChanges();
             return clienteAdicionado.Entity;
          }
-         public Cliente ConsultarCliente(int Id)
+         public Cliente ConsultarCliente(string Email)
          {
-            var clienteEncontrado = _appContext.Tb_cliente.FirstOrDefault(c => c.Id == Id);
+            var clienteEncontrado = _appContext.Tb_cliente.FirstOrDefault(c => c.Email == Email);
             return clienteEncontrado;
          }
          public  IEnumerable<Cliente> ConsultarClientes()

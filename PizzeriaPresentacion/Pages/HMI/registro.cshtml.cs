@@ -23,7 +23,6 @@ namespace PizzeriaPresentacion.Pages
         }
         public void OnGet()
         {
-            listaCliente = _repoCliente.ConsultarClientes();
         }
         public async Task<IActionResult> OnPost()
         {
@@ -32,7 +31,7 @@ namespace PizzeriaPresentacion.Pages
                 return Page();
             }
             _repoCliente.CrearCliente(cliente);
-            return RedirectToPage("/Index");
+            return RedirectToPage("/HMI/menu");
         }
     }
 }

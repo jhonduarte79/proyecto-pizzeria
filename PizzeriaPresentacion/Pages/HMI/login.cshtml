@@ -3,16 +3,54 @@
 @{
     ViewData["Title"] = "Login";
 }
-<div class="border">
-    <form> 
+<div class="top">
+    <img src="https://localhost:5001/imagenes/logo.jpeg" alt="" width="100px" height="100px">
+</div>
+<div class="border1">
+    <form method="post"> 
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <input asp-for="cliente.Email">
       </div>
       <button type="submit" class="btn btn-primary">Ingresar</button>
     </form>
+    
+    <form method="post" asp-page-handler="Editar">
+      <input type="hidden" asp-for="cliente.Id">
+       <div class="form-group">
+          <p class="log">Verifique si sus datos son correctos</p>
+          <input type="text" asp-for="cliente.Email" class="form-control" placeholder="correo">
+        </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="text" asp-for="cliente.Nombres" class="form-control" placeholder="nombres">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="text" asp-for="cliente.Apellidos" class="form-control" placeholder="apellidos" >
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="text" asp-for="cliente.Telefono" class="form-control" placeholder="telefono" >
+        </div>
+        <div class="form-group col-md-6"> 
+          <input type="number" asp-for="cliente.Edad" class="form-control" placeholder="edad">    
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" asp-for="cliente.Direccion" class="form-control" placeholder="direccion">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="submit" class="btn btn-primary" value="Actualizar">
+        </div> 
+         <div class="form-group col-md-6">
+          <button type="submit" class="btn btn-danger">Eliminar</button>
+        </div> 
+      </div> 
+    </form>
+      <div class="form-group">
+        <a type="submit" class="btn btn-primary btn-lg" asp-page="/HMI/menu">Empieza tu pedido</a>
+      </div>    
 </div>
+

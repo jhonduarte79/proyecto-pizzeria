@@ -85,3 +85,4 @@ C:\PROYECTOPIZZATECH\PizzeriaApp\PizzeriaPresentacion\bin\Debug\netcoreapp3.1\Pi
 C:\PROYECTOPIZZATECH\PizzeriaApp\PizzeriaPresentacion\bin\Debug\netcoreapp3.1\PizzeriaPersistencia.dll
 C:\PROYECTOPIZZATECH\PizzeriaApp\PizzeriaPresentacion\bin\Debug\netcoreapp3.1\PizzeriaPersistencia.pdb
 C:\PROYECTOPIZZATECH\PizzeriaApp\PizzeriaPresentacion\bin\Debug\netcoreapp3.1\PizzeriaDominio.pdb
+C:\PROYECTOPIZZATECH\PizzeriaApp\PizzeriaPresentacion\obj\Debug\netcoreapp3.1\Razor\Pages\HMI\consulta.cshtml.g.cs

@@ -76,7 +76,7 @@ body {
 
 /*-----estilos pizza tech--------*/
 .top{
-  color: #d35e16;
+  color: #e34409 ;
   font-size: 26px;
   text-align: center;
 
@@ -92,9 +92,6 @@ body {
   margin-bottom: 20px;
   margin-left: 25px;
 }
-h1{
-  text-align: center;
-}
 .etiqueta_1{
   display:flex;
   justify-content: space-evenly;
@@ -107,12 +104,48 @@ h1{
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 26px;
-  color: #d35e16;
+  color: #e34409 ;
 }
 .border{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 500px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
+  background-color:  #fbbb5b;
+  color:  #873004;
+}
+.border1{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60vh;
+  margin-top: 10px;
+  margin-left: 130px;
+  margin-right: 130px;
+  background-color:  #fbbb5b;
+}
+.log{
+  color: #873004 ;
+  text-align: center;
+  font-size: 18px;
+}
+table{
+  border: solid 2px #e34409 ;
+  border-style:groove;
+}
+thead{
+  background-color: #167ed3;
+  border: solid 2px #e34409 ;
+  color: #fff;
+}
+tr:nth-child(even){
+  background-color: #ddd;
+}
+tr:hover td{
+  background-color: #398fe4;
+  color: #ddd;
 }

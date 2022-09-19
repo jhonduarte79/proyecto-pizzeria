@@ -1,0 +1,31 @@
+﻿@page
+@model PizzeriaPresentacion.Pages.consultaModel
+@{
+     ViewData["Title"] = "consulta";
+}
+
+<table class = "table">
+<thead>
+  <tr>
+    <td>Nombres</td>
+    <td>Apellidos</td>
+    <td>Email</td>
+    <td>Edad</td>
+    <td>Telefono</td>
+    <td>Direccion</td>
+  </tr>
+</thead>
+  
+    @foreach (var c in Model.listaCliente)
+    {
+      <tr>
+        <td>@c.Nombres</td>
+        <td>@c.Apellidos</td>
+        <td>@c.Email</td>
+        <td>@c.Edad</td>
+        <td>@c.Telefono</td>
+        <td>@c.Direccion</td>
+      </tr>
+    }
+  
+</table>
