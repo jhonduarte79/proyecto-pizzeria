@@ -6,14 +6,14 @@ namespace PizzeriaConsola
 {
     class Program
     {
-        private static IRepositorioTb_cliente _repoTb_cliente = new RepositorioTb_cliente(new PizzeriaPersistencia.AppContext());
+        //private static IRepositorioTb_cliente _repoTb_cliente = new RepositorioTb_cliente(new PizzeriaPersistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("successful conexion!");
             //CrearCliente();
-            EliminarCliente();
+           // EliminarCliente();
         }
-        private static void CrearCliente()
+       /* private static void CrearCliente()
         {
             var cliente = new Cliente
             {
@@ -32,6 +32,6 @@ namespace PizzeriaConsola
         {
             _repoTb_cliente.EliminarCliente(2);    
 
-        }
+        }*/
     }
 }

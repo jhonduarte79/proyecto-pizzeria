@@ -143,9 +143,22 @@ thead{
   color: #fff;
 }
 tr:nth-child(even){
-  background-color: #ddd;
+  background-color: rgb(247, 243, 243);
 }
 tr:hover td{
   background-color: #398fe4;
   color: #ddd;
 }
+.imgen{
+  transition: all 0.2s linear;
+}
+.imgen:hover{
+  transform: scale(0.9);
+  background-color: #fbbb5b;
+  opacity: 0.5;
+}
+img{
+  border-radius: 15px;
+}
+
+

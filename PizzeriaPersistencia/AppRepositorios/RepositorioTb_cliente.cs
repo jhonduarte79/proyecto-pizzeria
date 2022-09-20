@@ -39,7 +39,7 @@ namespace PizzeriaPersistencia
             }
             return clienteEncontrado;
          }
-         public void EliminarCliente(int Id)
+         public void EliminarCliente(int Id) 
          {
             var clienteEncontrado = _appContext.Tb_cliente.FirstOrDefault(c => c.Id == Id);
             if(clienteEncontrado == null)

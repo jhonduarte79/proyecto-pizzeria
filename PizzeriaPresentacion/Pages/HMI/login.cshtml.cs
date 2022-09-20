@@ -20,16 +20,17 @@ namespace PizzeriaPresentacion.Pages
         {
             _repoCliente = repoCliente;
         }
-        public void OnGet()
+        public void OnGetEliminar(int Id) 
         {  
             cliente = new Cliente(); 
+            _repoCliente.EliminarCliente(cliente.Id);
         }
         public async Task<IActionResult> OnPost()
         {
             cliente = _repoCliente.ConsultarCliente(cliente.Email);
             if(cliente == null)
             {
-                return RedirectToPage("/Error"); 
+                return RedirectToPage("/Error");
             } 
             else{
                 return Page();
@@ -44,9 +45,8 @@ namespace PizzeriaPresentacion.Pages
             }
             else{
                 return RedirectToPage("/Error");
-            }
-            
-        }        
+            } 
+        } 
     }
 
 }

@@ -9,6 +9,6 @@ namespace PizzeriaPersistencia
         Cliente ConsultarCliente(string Email);
         IEnumerable<Cliente> ConsultarClientes();
         Cliente ActualizarCliente(Cliente cliente);
-        void EliminarCliente(int Id);  
+        void EliminarCliente(int Id)  ;  
     }
 }

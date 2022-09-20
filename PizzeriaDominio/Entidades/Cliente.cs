@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace PizzeriaDominio
 {
@@ -20,7 +21,7 @@ namespace PizzeriaDominio
         public string Direccion {get; set;}
       
         public string Password {get; set;}
-        public Producto Producto {get; set;}
+        public List<Producto> Producto {get; set;}
         public Pedido Pedido {get; set;}
     }
 }
