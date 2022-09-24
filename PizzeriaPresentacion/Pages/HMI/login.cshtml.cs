@@ -20,10 +20,9 @@ namespace PizzeriaPresentacion.Pages
         {
             _repoCliente = repoCliente;
         }
-        public void OnGetEliminar(int Id) 
+        public void OnGet() 
         {  
             cliente = new Cliente(); 
-            _repoCliente.EliminarCliente(cliente.Id);
         }
         public async Task<IActionResult> OnPost()
         {

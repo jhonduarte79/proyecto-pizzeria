@@ -1,0 +1,32 @@
+﻿@page
+@model PizzeriaPresentacion.Pages.productoModel
+@{
+     ViewData["Title"] = "Producto";
+}
+<div class="border">
+    <form method="post">
+      <div asp-validation-sumary="ModelOnly" class="text-danger"></div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label asp-for="producto.Precio"></label>
+          <input type="number" asp-for="producto.Precio" class="form-control" id="inputNombre" required="required">
+          <span asp-validation-for="producto.Precio" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+          <label asp-for="producto.Cantidad"></label>
+          <input  type="number"  asp-for="producto.Cantidad" class="form-control" id="inputCantidad">
+          <span asp-validation-for="producto.Cantidad" class="text-danger"></span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label asp-for="producto.Nombre"></label>
+        <input asp-for="producto.Nombre" class="form-control" id="inputPrecio" required="required">
+        <span asp-validation-for="producto.Nombre" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+      </div>
+      <button type="submit" class="btn btn-primary">Crear Producto</button>
+    </form>
+</div>
+
+

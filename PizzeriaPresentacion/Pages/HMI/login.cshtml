@@ -48,9 +48,9 @@
           <button type="submit" class="btn btn-danger">Eliminar</button>
         </div> 
       </div> 
-    </form>
       <div class="form-group">
-        <a type="submit" class="btn btn-primary btn-lg" asp-page="/HMI/menu">Empieza tu pedido</a>
+        <a type="submit" class="btn btn-primary btn-lg" asp-route-clienteId="@Model.cliente.Id" asp-page="/HMI/menu">Empieza tu pedido</a>
       </div>    
+    </form> 
 </div>
 

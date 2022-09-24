@@ -26,6 +26,7 @@ namespace PizzeriaPresentacion
         {
             services.AddRazorPages();
             services.AddSingleton<IRepositorioTb_cliente, RepositorioTb_cliente>();
+            services.AddSingleton<IRepositorioTb_producto, RepositorioTb_producto>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

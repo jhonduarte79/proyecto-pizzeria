@@ -5,6 +5,25 @@
 }
 
 <div class="top">
-    <img src="https://localhost:5001/imagenes/logo.jpeg" alt="" width=100px" height="100px">
+    <img src="https://localhost:5001/imagenes/logo.jpeg" alt="" width="100px" height="100px">
     <P>Pruductos agregados a su carrito</P>
 </div>
+
+<table class = "table">
+<thead>
+  <tr>
+    <td>Nombre</td>
+    <td>Cantidad</td>
+    <td>Precio</td>
+  </tr>
+</thead>
+  
+    @foreach (var c in Model.listaProductos)
+    {
+      <tr>
+        <td>@c.Nombre</td>
+        <td>@c.Cantidad</td>
+        <td>@c.Precio</td>
+      </tr>
+    }
+</table>
