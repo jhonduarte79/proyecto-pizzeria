@@ -20,6 +20,7 @@ namespace PizzeriaPresentacion.Pages
         }
         public void OnGet()
         {
+            
         }
         public async Task<IActionResult> OnPost()
         {
@@ -30,5 +31,27 @@ namespace PizzeriaPresentacion.Pages
             }
             return RedirectToPage("/Error");
         }
-    }
+        public async Task<IActionResult> OnPostConsult()
+        {
+            producto = _repoProducto.ConsultarProducto(producto.Id);
+            if(producto == null)
+            {
+                return RedirectToPage("/Error");
+            } 
+            else{
+                return Page();
+            }        
+        }
+        public async Task<IActionResult> OnPostEditar()
+        {
+            producto = _repoProducto.ActualizarProducto(producto);
+            if(producto != null)
+            {
+                return Page();
+            }
+            else{
+                return RedirectToPage("/Error");
+            } 
+        } 
+    } 
 }

@@ -28,6 +28,7 @@ namespace PizzeriaPersistencia
                 productoEncontrado.Nombre = producto.Nombre;
                 productoEncontrado.Cantidad = producto.Cantidad;
                 productoEncontrado.Precio = producto.Precio;
+                productoEncontrado.Url = producto.Url;
 
                 _appContext.SaveChanges();
             }

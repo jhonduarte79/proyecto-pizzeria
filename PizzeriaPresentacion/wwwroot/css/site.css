@@ -93,10 +93,9 @@ body {
   margin-left: 25px;
 }
 .etiqueta_1{
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 15px;
   text-align: center;
 }
 
@@ -105,6 +104,11 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 26px;
   color: #e34409 ;
+}
+.row{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .border{
   display: flex;
@@ -151,14 +155,19 @@ tr:hover td{
 }
 .imgen{
   transition: all 0.2s linear;
+  flex:auto;
+  padding: 80px;
+  align-items: center;
 }
 .imgen:hover{
   transform: scale(0.9);
-  background-color: #fbbb5b;
+  background-color: #d0cfca;
   opacity: 0.5;
 }
 img{
   border-radius: 15px;
+  width: auto;
+  
 }
 
 

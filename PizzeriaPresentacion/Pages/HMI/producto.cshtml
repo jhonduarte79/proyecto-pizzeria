@@ -28,5 +28,38 @@
       <button type="submit" class="btn btn-primary">Crear Producto</button>
     </form>
 </div>
+<div class="border1">
+    <form method="post" asp-page-handler="Consult"> 
+      <div class="form-group">
+        <label for="exampleId">Id</label>
+        <input asp-for="producto.Id">
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+
+    <form method="post" asp-page-handler="Editar">
+      <input type="hidden" asp-for="producto.Id">
+       <div class="form-group">
+          <p class="log">Verifique si sus datos son correctos</p>
+          <input type="text" asp-for="producto.Nombre" class="form-control" placeholder="nombre">
+        </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="number" asp-for="producto.Precio" class="form-control" placeholder="precio">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="number" asp-for="producto.Cantidad" class="form-control" placeholder="cantidad" >
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" asp-for="producto.Url" class="form-control" placeholder="url">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="submit" class="btn btn-primary" value="Actualizar">
+        </div> 
+      </div> 
+    </form> 
+</div>
 
 
