@@ -15,20 +15,22 @@ namespace PizzeriaPresentacion.Pages
         private readonly IRepositorioTb_cliente _repoCliente;
         [BindProperty]
         public IEnumerable<Producto> listaProductos{get; set;}
+        public List<Producto> listaProducto = new List<Producto>();
         [BindProperty]
         public Producto producto{get; set;}
         [BindProperty]
         public Cliente cliente{get; set;}
         public carritoModel(IRepositorioTb_producto repoProducto, IRepositorioTb_cliente repoCliente)
         {
-            _repoProducto= repoProducto;
+            _repoProducto = repoProducto;
             _repoCliente = repoCliente;
         }
-        public void OnGet()
+        public void OnGet(int productoId, int clienteId)
         {
             producto = new Producto();
-            listaProductos = new List<Producto>();
-            listaProductos = _repoProducto.ConsultarProductos();
+            cliente = new Cliente();
+            cliente = _repoCliente.ConsultarCliente(cliente.Email);
+            producto = _repoProducto.ConsultarProducto(productoId);
             if(producto == null)
             {
                  RedirectToPage("/Error");
@@ -37,17 +39,20 @@ namespace PizzeriaPresentacion.Pages
                  Page();
             }        
         }
-      /* public async Task<IActionResult> OnPost()
+       public async Task<IActionResult> OnPost(int clienteId, int productoId)
         {
-            listaProductos = new List<Producto>();
-            listaProductos = _repoProducto.ConsultarProductos();
-            if(producto == null)
+            producto = _repoProducto.ConsultarProducto(productoId);           
+            cliente = _repoCliente.ConsultarCliente(cliente.Email);
+            if(cliente != null)
             {
-                return RedirectToPage("/Error");
+                listaProducto.Add(producto);
+                cliente.Producto = listaProducto;
+                _repoCliente.ActualizarCliente(cliente);
+                return RedirectToPage("/HMI/menu");
             } 
             else{
-                return Page();
+                return RedirectToPage("/Error");
             }        
-        }*/
+        }
     }
 }

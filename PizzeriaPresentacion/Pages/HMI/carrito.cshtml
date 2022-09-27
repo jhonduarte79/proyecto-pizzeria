@@ -8,22 +8,22 @@
     <img src="https://localhost:5001/imagenes/logo.jpeg" alt="" width="100px" height="100px">
     <P>Pruductos agregados a su carrito</P>
 </div>
-
+<form method="post">
 <table class = "table">
 <thead>
   <tr>
     <td>Nombre</td>
     <td>Cantidad</td>
     <td>Precio</td>
+    <td>Total</td>
   </tr>
 </thead>
-  
-    @foreach (var c in Model.listaProductos)
-    {
-      <tr>
-        <td>@c.Nombre</td>
-        <td>@c.Cantidad</td>
-        <td>@c.Precio</td>
+     <tr>
+        <td>@Model.producto.Nombre</td>
+        <td>@Model.producto.Cantidad</td>
+        <td>@Model.producto.Precio</td>
       </tr>
-    }
+      <input type="submit" class="btn btn-primary" value="Agregar">
+      <a asp-page="/HMI/menu" class="btn btn-success col-sm-1">Continuar</a>
 </table>
+</form>

@@ -31,7 +31,7 @@ namespace PizzeriaPresentacion.Pages
                 return Page();
             }
             _repoCliente.CrearCliente(cliente);
-            return RedirectToPage("/HMI/menu");
+            return RedirectToPage("/HMI/login");
         }
     }
 }
